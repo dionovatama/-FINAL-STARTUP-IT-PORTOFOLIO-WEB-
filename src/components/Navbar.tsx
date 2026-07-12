@@ -16,12 +16,12 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <header className="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-xs border-b border-gray-200/50 dark:border-slate-800/50">
+    <header className="fixed top-0 w-full z-50 bg-slate-950/80 backdrop-blur-md shadow-xs border-b border-slate-800/50">
       <nav className="flex justify-between items-center max-w-7xl mx-auto px-6 h-16" id="top-navbar">
         {/* Brand Logo */}
         <Link
           href="/"
-          className="font-display text-xl md:text-2xl font-bold tracking-tighter text-black dark:text-white cursor-pointer select-none"
+          className="font-display text-xl md:text-2xl font-bold tracking-tighter text-white cursor-pointer select-none"
           id="brand-logo"
         >
           ARCHITECT.IT
@@ -35,8 +35,8 @@ export default function Navbar() {
               href={item.href}
               className={`transition-all duration-200 cursor-pointer ${
                 pathname === item.href
-                  ? 'text-indigo-600 border-b-2 border-indigo-600 pb-1'
-                  : 'text-gray-600 hover:text-black dark:text-gray-300 dark:hover:text-white'
+                  ? 'text-indigo-400 border-b-2 border-indigo-400 pb-1'
+                  : 'text-gray-300 hover:text-white'
               }`}
             >
               {item.label}
@@ -48,7 +48,7 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-4">
           <Link
             href="/katalog"
-            className="text-sm font-sans text-gray-600 hover:opacity-80 transition-opacity active:scale-95 duration-200"
+            className="text-sm font-sans text-gray-300 hover:opacity-80 transition-opacity active:scale-95 duration-200"
             id="btn-sign-in"
           >
             Konsultasi
@@ -64,7 +64,7 @@ export default function Navbar() {
 
         {/* Mobile Hamburger Toggle */}
         <button
-          className="md:hidden text-gray-700 dark:text-gray-200 hover:text-black p-1 transition-colors"
+          className="md:hidden text-gray-200 hover:text-white p-1 transition-colors"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle navigation menu"
           id="btn-mobile-menu"
@@ -75,7 +75,7 @@ export default function Navbar() {
 
       {/* Mobile Drawer Navigation */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-gray-200 dark:border-slate-800 transition-all absolute top-16 w-full left-0 py-6 px-6 shadow-lg z-50">
+        <div className="md:hidden bg-slate-900/95 backdrop-blur-md border-b border-slate-800 transition-all absolute top-16 w-full left-0 py-6 px-6 shadow-lg z-50">
           <div className="flex flex-col gap-5">
             {navItems.map((item) => (
               <Link
@@ -84,21 +84,21 @@ export default function Navbar() {
                 onClick={() => setMobileMenuOpen(false)}
                 className={`text-left text-base font-semibold py-2 transition-all ${
                   pathname === item.href
-                    ? 'text-indigo-600 pl-2 border-l-4 border-indigo-600'
-                    : 'text-gray-600 dark:text-gray-300 pl-2'
+                    ? 'text-indigo-400 pl-2 border-l-4 border-indigo-400'
+                    : 'text-gray-300 pl-2'
                 }`}
               >
                 {item.label}
               </Link>
             ))}
 
-            <hr className="border-gray-100 dark:border-slate-800 my-2" />
+            <hr className="border-slate-800 my-2" />
 
             <div className="flex flex-col gap-3">
               <Link
                 href="/katalog"
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-center text-sm font-medium text-gray-700 dark:text-gray-300 py-3 rounded-lg border border-gray-200 dark:border-slate-800"
+                className="text-center text-sm font-medium text-gray-300 py-3 rounded-lg border border-slate-800"
               >
                 Konsultasi WhatsApp
               </Link>

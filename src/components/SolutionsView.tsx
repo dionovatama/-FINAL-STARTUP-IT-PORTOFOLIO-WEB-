@@ -13,28 +13,22 @@ import HeroCarousel, { CarouselItem } from './HeroCarousel';
 
 const carouselItems: CarouselItem[] = [
   {
-    src: IMAGES.orbitSync,
-    alt: 'Orbit Sync Data Center Recovery',
-    title: 'Orbit Sync',
-    description: 'Real-time datacenter status and high-availability server cluster recovery.'
+    src: '/ilus/maintenance.png',
+    alt: 'Layanan Maintenance Infrastruktur',
+    title: 'Maintenance',
+    description: 'Pemeliharaan rutin server dan jaringan untuk memastikan sistem tetap stabil dan minim downtime.'
   },
   {
-    src: IMAGES.scalableArch,
-    alt: 'Scalable Infrastructure Architecture',
-    title: 'Scalable Infrastructure',
-    description: 'Modular fiber routing, smart power grids, and low-latency edge deployment.'
+    src: '/ilus/konsultasi-jaringan.png',
+    alt: 'Konsultasi Jaringan',
+    title: 'Konsultasi Jaringan',
+    description: 'Perencanaan dan desain arsitektur jaringan yang scalable sesuai kebutuhan bisnis Anda.'
   },
   {
-    src: IMAGES.neoEdgeMesh,
-    alt: 'Neo-Edge Mesh Collaborative Development',
-    title: 'Neo-Edge Mesh',
-    description: '3D container orchestration pipelines and collaborative live-system monitors.'
-  },
-  {
-    src: IMAGES.hero3D,
-    alt: 'Cloud Infrastructure Developer Hub',
-    title: 'Developer Hub Console',
-    description: 'Highly responsive monitoring tools, custom dashboards, and performance tuning.'
+    src: '/ilus/web-development.png',
+    alt: 'Web Development',
+    title: 'Web Development',
+    description: 'Pengembangan website dan aplikasi custom dengan teknologi modern dan performa tinggi.'
   }
 ];
 import { 
@@ -132,7 +126,7 @@ export default function SolutionsView() {
           </div>
 
           {/* Auto-swiping portfolio image carousel */}
-          <div className="relative w-full mt-10 md:mt-0 max-w-lg md:max-w-none mx-auto">
+          <div className="relative w-full mt-10 md:mt-0 max-w-md mx-auto">
             <HeroCarousel items={carouselItems} />
           </div>
         </div>

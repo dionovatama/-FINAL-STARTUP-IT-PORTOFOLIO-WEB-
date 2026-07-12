@@ -61,7 +61,7 @@ export default function Footer() {
 
         <div className="flex flex-col md:flex-row justify-between items-center pt-8 text-xs text-slate-500 gap-4">
           <div>
-            Built with <Heart className="w-3 h-3 inline text-red-500 fill-current mx-0.5" /> in Jakarta, Indonesia. Built for modern high-scale workloads.
+            Built with <Heart className="w-3 h-3 inline text-red-500 fill-current mx-0.5" /> in Bandung, Indonesia. Built for modern high-scale workloads.
           </div>
           <div className="flex gap-4">
             <span>Uptime: 99.999%</span>
